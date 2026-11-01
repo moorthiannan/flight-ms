@@ -1,0 +1,2 @@
+{% extends 'base.html' %}{% block page_heading %}{{ title }}{% endblock %}{% block content %}
+<section class="form-panel"><div class="panel-head"><div><p class="eyebrow">RECORD MANAGEMENT</p><h3>{{ title }}</h3></div></div><form method="post" class="data-form">{% csrf_token %}{{ form.as_p }}<div class="form-actions"><a class="btn secondary" href="javascript:history.back()">Cancel</a><button class="btn primary">Save</button></div></form></section>{% endblock %}

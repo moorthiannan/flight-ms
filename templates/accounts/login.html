@@ -1,0 +1,4 @@
+{% extends 'base.html' %}{% block title %}Login | SkyTrack{% endblock %}
+{% block auth_content %}<section class="auth-card"><div class="brand auth-brand"><span class="brand-mark">S</span><span>SkyTrack<small>FLIGHT MANAGEMENT</small></span></div><p class="eyebrow">WELCOME BACK</p><h1>Sign in to your account</h1><p class="muted">Manage flights, passengers and bookings.</p>
+<form method="post">{% csrf_token %}{{ form.as_p }}<button class="btn primary full">Sign in</button></form>
+<p class="auth-foot">New here? <a href="{% url 'register' %}">Create an account</a></p></section>{% endblock %}

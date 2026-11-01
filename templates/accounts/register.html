@@ -1,0 +1,2 @@
+{% extends 'base.html' %}{% block title %}Register | SkyTrack{% endblock %}
+{% block auth_content %}<section class="auth-card"><div class="brand auth-brand"><span class="brand-mark">S</span><span>SkyTrack<small>FLIGHT MANAGEMENT</small></span></div><p class="eyebrow">GET STARTED</p><h1>Create an account</h1><form method="post">{% csrf_token %}{{ form.as_p }}<button class="btn primary full">Register</button></form><p class="auth-foot">Already registered? <a href="{% url 'login' %}">Sign in</a></p></section>{% endblock %}
